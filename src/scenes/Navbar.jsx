@@ -2,6 +2,7 @@ import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import useMediaQuery from "../hooks/useMediaQuery";
+import { closeIcon, menuIcon } from "../assets";
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
@@ -63,20 +64,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             className="rounded-full bg-red p-2"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M3 8V6H21V8H3ZM3 13H21V11H3V13ZM3 18H21V16H3V18Z"
-                fill="white"
-              />
-            </svg>
+            <img src={menuIcon} alt="menu-icon" />
           </button>
         )}
 
@@ -86,19 +74,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             {/* CLOSE ICON */}
             <div className="flex justify-end p-12">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
-                    fill="white"
-                    fill-opacity="0.54"
-                  />
-                </svg>
+                <img src={closeIcon} alt="close-icon" />
               </button>
             </div>
             {/* MENU ITEMS */}
