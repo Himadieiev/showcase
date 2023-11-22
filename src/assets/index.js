@@ -5,5 +5,15 @@ import linkedin from "./linkedin.png";
 import instagram from "./instagram.png";
 import facebook from "./facebook.png";
 import twitter from "./twitter.png";
+import skills from "./skills-image.png";
 
-export { closeIcon, menuIcon, profile, linkedin, instagram, facebook, twitter };
+export {
+  closeIcon,
+  menuIcon,
+  profile,
+  linkedin,
+  instagram,
+  facebook,
+  twitter,
+  skills,
+};
