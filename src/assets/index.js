@@ -13,6 +13,7 @@ import project4 from "./project-4.jpeg";
 import project5 from "./project-5.jpeg";
 import project6 from "./project-6.jpeg";
 import project7 from "./project-7.jpeg";
+import contact from "./contact-image.jpeg";
 
 export {
   closeIcon,
@@ -30,4 +31,5 @@ export {
   project5,
   project6,
   project7,
+  contact,
 };
