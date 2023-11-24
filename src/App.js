@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from "./scenes/Navbar";
@@ -19,8 +20,10 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY === 0) setIsTopOfPage(true);
-
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true);
+        setSelectedPage("home");
+      }
       if (window.scrollY !== 0) setIsTopOfPage(false);
     };
     window.addEventListener("scroll", handleScroll);
@@ -41,23 +44,53 @@ function App() {
             setSelectedPage={setSelectedPage}
           />
         )}
-        <Landing setSelectedPage={setSelectedPage} />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("home")}
+        >
+          <Landing setSelectedPage={setSelectedPage} />
+        </motion.div>
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
-        <MySkills />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("skills")}
+        >
+          <MySkills />
+        </motion.div>
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto">
-        <Projects />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("projects")}
+        >
+          <Projects />
+        </motion.div>
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
-        <Testimonials />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("testimonials")}
+        >
+          <Testimonials />
+        </motion.div>
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
-        <Contact />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("contact")}
+        >
+          <Contact />
+        </motion.div>
       </div>
       <Footer />
     </div>

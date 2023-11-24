@@ -698,6 +698,18 @@ video {
   margin-top: 1.75rem;
 }
 
+.mb-12{
+  margin-bottom: 3rem;
+}
+
+.mb-11{
+  margin-bottom: 2.75rem;
+}
+
+.mb-20{
+  margin-bottom: 5rem;
+}
+
 .flex{
   display: flex;
 }
@@ -732,6 +744,10 @@ video {
 
 .h-64{
   height: 16rem;
+}
+
+.h-20{
+  height: 5rem;
 }
 
 .max-h-\[400px\]{
@@ -967,6 +983,14 @@ video {
 
 .pt-48{
   padding-top: 12rem;
+}
+
+.pb-10{
+  padding-bottom: 2.5rem;
+}
+
+.pb-20{
+  padding-bottom: 5rem;
 }
 
 .text-center{
